@@ -7,20 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeMenu = () => {
     if (!menuBtn || !mobileMenu) return;
-    mobileMenu.classList.add('hidden');
+    mobileMenu.hidden = true;
     menuBtn.setAttribute('aria-expanded', 'false');
     menuBtn.setAttribute('aria-label', 'Open navigation');
   };
 
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
-      const open = !mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden', open);
+      const open = !mobileMenu.hidden;
+      mobileMenu.hidden = open;
       menuBtn.setAttribute('aria-expanded', String(!open));
       menuBtn.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
     });
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMenu();
+    });
   }
 
   const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 16);
