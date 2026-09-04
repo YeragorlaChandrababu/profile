@@ -1,21 +1,35 @@
-# Yeragorla Chandrababu — Developer Portfolio
+# Yeragorla Chandrababu — Senior Java Backend Engineer
 
-A responsive, recruiter-friendly personal portfolio for **Yeragorla Chandrababu**, focused on Senior Java Backend Engineering, distributed systems, event-driven architecture, and financial-services technology.
+> Premium personal portfolio focused on **Java, Spring Boot, Kafka, Microservices and AWS**, with enterprise Banking & Financial Services experience.
 
-🌐 **Live portfolio:** `https://yeragorlachandrababu.github.io/profile/`
+🌐 **Live portfolio:** https://yeragorlachandrababu.github.io/profile/
 
-## ✨ Highlights
+## 🎯 Positioning
 
-- Responsive, mobile-first layout for phones, tablets, and desktops
-- Senior Java Backend Developer positioning and engineering-focused content
-- Experience timeline covering enterprise banking and technology consulting
-- Technical skills across Java, Spring Boot, Kafka, AWS, databases, testing, and CI/CD
-- Project showcase for backend, AI, testing, and database solutions
-- Honors, certifications, and education sections
-- Accessible mobile navigation with keyboard/Escape support
-- Subtle glassmorphism, hover, focus, and scroll interactions
-- Reduced-motion support for accessibility
-- Hosted as a static site with GitHub Pages
+This portfolio is intentionally designed for **Senior Java Backend / Backend Engineer opportunities (15+ LPA target)**. It prioritizes the signals recruiters and engineering managers typically look for:
+
+- Modern Java 21 backend development
+- Spring Boot and production REST APIs
+- Microservices and distributed-system thinking
+- Apache Kafka and event-driven architecture
+- AWS cloud-native services
+- Enterprise Banking & Financial Services experience
+- Automated testing, CI/CD and code quality
+- AI-assisted engineering and conversational AI experience
+
+## ✨ Portfolio Experience
+
+- Premium dark UI with responsive mobile-first layout
+- Animated ambient background and subtle glassmorphism
+- Strong recruiter-focused hero section
+- High-signal **Java / Spring Boot / Kafka / AWS** technology strip
+- Skill cards with focused technology badges
+- Visual career timeline with current-role emphasis
+- Project cards with GitHub entry points
+- Recognition and certification highlights
+- Accessible mobile navigation and keyboard support
+- Reduced-motion support
+- Static deployment with GitHub Pages — no build pipeline required
 
 ## 🧰 Tech Stack
 
@@ -27,9 +41,9 @@ A responsive, recruiter-friendly personal portfolio for **Yeragorla Chandrababu*
 | Interaction | Vanilla JavaScript |
 | Hosting | GitHub Pages |
 
-> Tailwind CSS is retained instead of adding Bootstrap alongside it. The existing page already uses Tailwind extensively, so mixing two CSS frameworks would add unnecessary CSS conflicts and payload without improving the UI.
+Tailwind is used as the primary utility framework rather than mixing Bootstrap with an existing Tailwind codebase. Custom CSS provides the premium visual layer, responsive behavior, animations and component styling.
 
-## 📁 Project Structure
+## 📁 Structure
 
 ```text
 profile/
@@ -43,46 +57,57 @@ profile/
         └── main.js
 ```
 
+## 💼 Featured Engineering Work
+
+### Dynamic API Mock Server
+Custom mock engine using MongoDB and WireMock to dynamically create and re-register mappings without restarting the mock server.
+
+**Stack:** Spring Boot · WireMock · MongoDB · Microservices
+
+### AI Test Script Generation Tool
+Node-based workflow connecting Jira requirements with an AI-assisted VS Code extension to generate structured QA test suites and Excel outputs.
+
+**Stack:** Node.js · AI tooling · Jira API · VS Code Extension
+
+### ERICA Digital Assistant Services
+Backend services supporting conversational banking interactions, account queries and transaction intents with resilient integrations.
+
+**Stack:** Java · Groovy · Spring Boot · REST
+
+### Dairy Management System
+Desktop application for milk procurement, vendor tracking and automated billing ledgers.
+
+**Stack:** Visual Basic 6 · MS Access · Database Design
+
+## 🏢 Experience Snapshot
+
+- **Accenture — Packaged App Development Senior Analyst** · Client: TIAA · May 2026–Present
+- **Infosys — Senior Systems Engineer** · Jan 2026–May 2026
+- **Infosys — Systems Engineer** · Client: Bank of America ERICA · Apr 2024–Dec 2025
+- **Infosys — Senior Systems Associate** · AI IVR & Bots · Apr 2023–Apr 2024
+- **Infosys — Systems Associate** · Bank of America Core Banking · Mar 2022–Mar 2023
+
 ## 🚀 Run Locally
 
 No build step is required.
 
 1. Clone the repository.
-2. Open `index.html` directly, or use VS Code Live Server.
-3. Visit the local URL shown by your development server.
-
-Because the portfolio is static, it can also be served by any simple HTTP server.
+2. Open `index.html`, or use VS Code Live Server.
+3. Visit the local development URL.
 
 ## 🌍 GitHub Pages
 
-The site is designed for GitHub Pages and can be deployed directly from the repository's `main` branch.
-
-Recommended GitHub Pages configuration:
+Recommended configuration:
 
 - **Source:** Deploy from a branch
 - **Branch:** `main`
 - **Folder:** `/ (root)`
 
-## 🎯 Portfolio Focus
-
-The portfolio is intentionally optimized around a backend-engineering profile, highlighting:
-
-- Java 8/11/17/21
-- Spring Boot and REST APIs
-- Microservices and event-driven architecture
-- Apache Kafka
-- MongoDB and MySQL
-- AWS serverless and cloud services
-- JUnit, Mockito, WireMock, and SonarQube
-- Jenkins, Git, Maven, and CI/CD
-- Banking and Financial Services domain experience
-- AI-assisted engineering and conversational AI
-
 ## 🔗 Profiles
 
-- LinkedIn: `https://www.linkedin.com/in/yeragorlachandrababu/`
-- GitHub: `https://github.com/YeragorlaChandrababu`
+- LinkedIn: https://www.linkedin.com/in/yeragorlachandrababu/
+- GitHub: https://github.com/YeragorlaChandrababu
 
 ## 📄 License
 
-This repository contains a personal portfolio. Content and personal branding are owned by Yeragorla Chandrababu.
+Personal portfolio and branding of Yeragorla Chandrababu.
