@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     @keyframes photoPulse{50%{transform:scale(1.025);opacity:.55}}
     .linkedin-mark,.github-mark{width:16px;height:16px;display:block;flex:0 0 auto}
 
+    /* Branded technology logos for core stack, capability tags and selected work. */
+    .stack-tech,.tech-tag{display:inline-flex!important;align-items:center;gap:7px}
+    .stack-tech img,.tech-tag img{width:16px;height:16px;object-fit:contain;display:block;flex:0 0 auto}
+    .tech-tag{font:700 10px monospace!important}
+    .tech-tag img{width:14px;height:14px}
+    .tech-tag .generic-tech-icon{width:14px;height:14px;display:grid;place-items:center;color:#7dd3fc;font-size:12px;line-height:1}
+
     @media(min-width:901px){
       .nav{gap:22px}.nav-links{gap:22px;margin-right:10px}
       .hero{grid-template-columns:minmax(0,1.08fr) minmax(340px,.72fr);grid-template-rows:auto auto;align-items:start;column-gap:58px;row-gap:22px;padding-top:52px;padding-bottom:64px}
@@ -73,6 +80,56 @@ document.addEventListener('DOMContentLoaded', () => {
     const label=item.textContent.trim(); if(!brandMap[label]) return;
     item.classList.add('stack-tech'); const img=document.createElement('img'); img.src=brandMap[label]; img.alt=''; img.setAttribute('aria-hidden','true');
     img.onerror=()=>{if(img.src!==logoFallback[label]) img.src=logoFallback[label]; else img.style.display='none'}; item.prepend(img);
+  });
+
+  // Technology logos used consistently in CAPABILITIES and SELECTED WORK tags.
+  const techLogoMap={
+    'Java':'https://cdn.simpleicons.org/openjdk/ffffff',
+    'Java 21':'https://cdn.simpleicons.org/openjdk/ffffff',
+    'Spring Boot':'https://cdn.simpleicons.org/springboot/ffffff',
+    'JPA':'https://cdn.simpleicons.org/hibernate/ffffff',
+    'Kafka':'https://cdn.simpleicons.org/apachekafka/ffffff',
+    'Apache Kafka':'https://cdn.simpleicons.org/apachekafka/ffffff',
+    'AWS':'https://cdn.simpleicons.org/amazonwebservices/ffffff',
+    'MongoDB':'https://cdn.simpleicons.org/mongodb/ffffff',
+    'MySQL':'https://cdn.simpleicons.org/mysql/ffffff',
+    'JUnit':'https://cdn.simpleicons.org/junit5/ffffff',
+    'SonarQube':'https://cdn.simpleicons.org/sonarqube/ffffff',
+    'Node.js':'https://cdn.simpleicons.org/nodedotjs/ffffff',
+    'Jira API':'https://cdn.simpleicons.org/jira/ffffff',
+    'VS Code':'https://cdn.simpleicons.org/visualstudiocode/ffffff',
+    'Groovy':'https://cdn.simpleicons.org/apachegroovy/ffffff',
+    'WireMock':'https://cdn.simpleicons.org/wiremock/ffffff',
+    'REST':'https://cdn.simpleicons.org/openapiinitiative/ffffff',
+    'REST APIs':'https://cdn.simpleicons.org/openapiinitiative/ffffff',
+    'CI/CD':'https://cdn.simpleicons.org/githubactions/ffffff',
+    'MS Access':'https://cdn.simpleicons.org/microsoftaccess/ffffff'
+  };
+  const techIconFallback={
+    'Microservices':'⟡','Events':'↯','AI':'✦','Database':'▦','VS Code':'⌘','REST':'↗','REST APIs':'↗','CI/CD':'↻','JPA':'◆','WireMock':'◌','Jira API':'◆'
+  };
+  document.querySelectorAll('.tags b').forEach(tag=>{
+    const label=tag.textContent.trim();
+    const url=techLogoMap[label];
+    if(url){
+      tag.classList.add('tech-tag');
+      const img=document.createElement('img'); img.src=url; img.alt=''; img.setAttribute('aria-hidden','true');
+      img.onerror=()=>{img.remove(); if(techIconFallback[label]){const icon=document.createElement('span');icon.className='generic-tech-icon';icon.textContent=techIconFallback[label];icon.setAttribute('aria-hidden','true');tag.prepend(icon)}};
+      tag.prepend(img);
+    } else if(techIconFallback[label]) {
+      tag.classList.add('tech-tag');
+      const icon=document.createElement('span');icon.className='generic-tech-icon';icon.textContent=techIconFallback[label];icon.setAttribute('aria-hidden','true');tag.prepend(icon);
+    }
+  });
+
+  // Explicit visual marks for CORE STACK items that are concepts rather than vendor brands.
+  const conceptMarks={'Microservices':'⟡','REST APIs':'↗'};
+  document.querySelectorAll('.stack-inner > span:not(.strip-label)').forEach(item=>{
+    const label=item.textContent.trim();
+    if(conceptMarks[label] && !item.querySelector('img')){
+      item.classList.add('stack-tech');
+      const icon=document.createElement('span'); icon.className='generic-tech-icon'; icon.textContent=conceptMarks[label]; icon.setAttribute('aria-hidden','true'); item.prepend(icon);
+    }
   });
 
   // Accurate inline LinkedIn and GitHub marks — no external icon dependency.
