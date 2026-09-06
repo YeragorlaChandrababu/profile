@@ -101,6 +101,36 @@
     `;
     document.head.appendChild(buttonStyle);
 
+    // Tighten content cards only. Profile photo/layout is intentionally untouched.
+    const contentBoxStyle = document.createElement('style');
+    contentBoxStyle.textContent = `
+      .skill-card { padding: 20px; }
+      .skill-card h3 { margin-top: 18px; }
+      .tags { margin-top: 14px; }
+      .experience-card { padding: 18px 20px; }
+      .experience-card ul { margin-top: 12px; }
+      .project-card { padding: 20px; }
+      .project-card .tags { margin-top: 14px; }
+      .recognition { padding: 24px; }
+      .award-grid { margin-top: 16px; gap: 7px; }
+      .contact-card { padding: 48px 20px; }
+      .contact-card .hero-actions { margin-top: 22px; }
+      @media (max-width: 900px) {
+        .skill-card, .project-card { padding: 18px; }
+        .experience-card { padding: 16px 18px; }
+        .recognition { padding: 20px; }
+        .contact-card { padding: 40px 18px; }
+      }
+      @media (max-width: 640px) {
+        .skill-card, .project-card, .experience-card { padding: 15px; }
+        .recognition { padding: 18px; }
+        .contact-card { padding: 34px 15px; }
+        .skill-card h3 { margin-top: 15px; }
+        .tags, .project-card .tags { margin-top: 12px; }
+      }
+    `;
+    document.head.appendChild(contentBoxStyle);
+
     // Make the same profile photo available to browsers that inspect runtime metadata.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
