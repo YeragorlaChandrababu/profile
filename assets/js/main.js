@@ -62,6 +62,45 @@
       hero.insertBefore(wrap, heroCopy);
     }
 
+    // Make the hero GitHub action a full button, matching the LinkedIn button.
+    const buttonStyle = document.createElement('style');
+    buttonStyle.textContent = `
+      .hero-actions .btn-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 11px 16px;
+        border: 1px solid #263448;
+        border-radius: 10px;
+        background: #101827;
+        color: #e6edf6;
+        font-size: 13px;
+        font-weight: 800;
+      }
+      .hero-actions .btn-link:hover {
+        color: #fff;
+        border-color: #43536a;
+        transform: translateY(-2px);
+      }
+      @media (max-width: 680px) {
+        .hero-actions .btn-link {
+          min-height: 44px;
+          padding: 10px 13px;
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 480px) {
+        .hero-actions .btn-link {
+          min-height: 42px;
+          padding: 9px 10px;
+          font-size: 11px;
+        }
+      }
+    `;
+    document.head.appendChild(buttonStyle);
+
     // Make the same profile photo available to browsers that inspect runtime metadata.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
