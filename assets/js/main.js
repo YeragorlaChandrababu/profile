@@ -131,6 +131,21 @@
     `;
     document.head.appendChild(contentBoxStyle);
 
+    // Respect user motion preferences without removing meaningful content.
+    const accessibilityStyle = document.createElement('style');
+    accessibilityStyle.textContent = `
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    `;
+    document.head.appendChild(accessibilityStyle);
+
     // Make the same profile photo available to browsers that inspect runtime metadata.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
