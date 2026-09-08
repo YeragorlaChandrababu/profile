@@ -8,22 +8,38 @@
 
     // Mobile navigation: one source of truth, no CSS/DOM patch stacking.
     if (menuButton && mobileMenu) {
-      const setMenu = (open) => {
+      const menuLinks = [...mobileMenu.querySelectorAll('a')];
+      const setMenu = (open, { moveFocus = false } = {}) => {
         mobileMenu.hidden = !open;
         menuButton.setAttribute('aria-expanded', String(open));
         menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
         menuButton.classList.toggle('is-open', open);
+        if (open && moveFocus) menuLinks[0]?.focus();
+        if (!open && moveFocus) menuButton.focus();
       };
 
       setMenu(false);
-      menuButton.addEventListener('click', () => setMenu(mobileMenu.hidden));
-      mobileMenu.querySelectorAll('a').forEach((link) => {
+      menuButton.addEventListener('click', () => {
+        const open = mobileMenu.hidden;
+        setMenu(open, { moveFocus: true });
+      });
+      menuLinks.forEach((link) => {
         link.addEventListener('click', () => setMenu(false));
       });
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && !mobileMenu.hidden) {
-          setMenu(false);
-          menuButton.focus();
+          setMenu(false, { moveFocus: true });
+        }
+        if (event.key === 'Tab' && !mobileMenu.hidden && menuLinks.length) {
+          const first = menuLinks[0];
+          const last = menuLinks[menuLinks.length - 1];
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            menuButton.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            menuButton.focus();
+          }
         }
       });
       window.addEventListener('resize', () => {
