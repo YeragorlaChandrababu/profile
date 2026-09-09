@@ -162,6 +162,62 @@
     `;
     document.head.appendChild(accessibilityStyle);
 
+    // Add a lightweight light/dark theme toggle without changing the page structure.
+    const themeButton = document.createElement('button');
+    themeButton.type = 'button';
+    themeButton.className = 'theme-toggle';
+    themeButton.setAttribute('aria-label', 'Switch to light theme');
+    themeButton.setAttribute('title', 'Switch theme');
+    themeButton.innerHTML = '<i data-lucide="sun-moon"></i>';
+    const nav = document.querySelector('.nav');
+    if (nav && !nav.querySelector('.theme-toggle')) nav.insertBefore(themeButton, menuButton);
+
+    const themeStyle = document.createElement('style');
+    themeStyle.textContent = `
+      :root[data-theme="light"] {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --surface: #ffffff;
+        --surface-2: #eef2f8;
+        --text: #102033;
+        --muted: #53657c;
+        --line: #dbe3ee;
+      }
+      :root[data-theme="light"] body { background: var(--bg); color: var(--text); }
+      :root[data-theme="light"] .site-header,
+      :root[data-theme="light"] .skill-card,
+      :root[data-theme="light"] .experience-card,
+      :root[data-theme="light"] .project-card,
+      :root[data-theme="light"] .recognition,
+      :root[data-theme="light"] .contact-card { background: var(--surface); color: var(--text); }
+      :root[data-theme="light"] .eyebrow,
+      :root[data-theme="light"] .lead-copy,
+      :root[data-theme="light"] p,
+      :root[data-theme="light"] .time,
+      :root[data-theme="light"] .section-title p { color: var(--muted); }
+      .theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #263448; border-radius: 10px; background: transparent; color: inherit; cursor: pointer; }
+      .theme-toggle:hover { transform: translateY(-2px); }
+      @media (max-width: 900px) { .theme-toggle { margin-left: auto; margin-right: 8px; } }
+    `;
+    document.head.appendChild(themeStyle);
+
+    const storedTheme = localStorage.getItem('profile-theme');
+    const preferredLight = window.matchMedia?.('(prefers-color-scheme: light)').matches;
+    const applyTheme = (theme) => {
+      const light = theme === 'light';
+      document.documentElement.dataset.theme = light ? 'light' : 'dark';
+      themeButton.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+      themeButton.setAttribute('title', light ? 'Switch to dark theme' : 'Switch to light theme');
+      themeButton.innerHTML = `<i data-lucide="${light ? 'moon' : 'sun-moon'}"></i>`;
+      if (window.lucide?.createIcons) window.lucide.createIcons();
+    };
+    applyTheme(storedTheme || (preferredLight ? 'light' : 'dark'));
+    themeButton.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('profile-theme', nextTheme);
+      applyTheme(nextTheme);
+    });
+
     // Make the same profile photo available to browsers that inspect runtime metadata.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
