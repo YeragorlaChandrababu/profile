@@ -218,6 +218,23 @@
       applyTheme(nextTheme);
     });
 
+    // Highlight the current desktop nav section while scrolling.
+    const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+    if (navLinks.length && sections.length && 'IntersectionObserver' in window) {
+      const sectionToLink = new Map(sections.map((section, index) => [section.id, navLinks[index]]));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link) => link.classList.remove('active'));
+          sectionToLink.get(entry.target.id)?.classList.add('active');
+        });
+      }, { rootMargin: '-28% 0px -58% 0px', threshold: 0 });
+      sections.forEach((section) => observer.observe(section));
+    }
+
     // Make the same profile photo available to browsers that inspect runtime metadata.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
