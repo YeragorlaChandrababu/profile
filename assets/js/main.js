@@ -235,7 +235,7 @@
       sections.forEach((section) => observer.observe(section));
     }
 
-    // Make the same profile photo available to browsers that inspect runtime metadata.
+    // Keep the portfolio image metadata consistent.
     const profileImage = 'https://avatars.githubusercontent.com/u/87219994?v=4';
     const addMeta = (property, content) => {
       if (!document.head.querySelector(`meta[property="${property}"]`)) {
@@ -247,6 +247,36 @@
     };
     addMeta('og:image', profileImage);
     addMeta('og:image:alt', 'Yeragorla Chandrababu — Senior Java Backend Engineer');
+
+    // Add a subtle reading-progress indicator for long single-page navigation.
+    const progressStyle = document.createElement('style');
+    progressStyle.textContent = `
+      .scroll-progress {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 1200;
+        height: 3px;
+        background: linear-gradient(90deg, #38bdf8, #a78bfa);
+        transform: scaleX(0);
+        transform-origin: left center;
+        pointer-events: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .scroll-progress { transition: none; }
+      }
+    `;
+    document.head.appendChild(progressStyle);
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    progressBar.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progressBar);
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.transform = `scaleX(${scrollable > 0 ? window.scrollY / scrollable : 0})`;
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
 
     const renderIcons = () => {
       if (window.lucide?.createIcons) window.lucide.createIcons();
