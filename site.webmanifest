@@ -2,17 +2,36 @@
   "name": "Yeragorla Chandrababu | Senior Java Backend Engineer",
   "short_name": "YC Portfolio",
   "description": "Senior Java Backend Engineer specializing in Spring Boot, Kafka, microservices and AWS.",
+  "lang": "en-IN",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#070b14",
   "theme_color": "#070b14",
+  "categories": ["business", "portfolio", "technology"],
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View projects",
+      "short_name": "Projects",
+      "description": "Open selected engineering projects",
+      "url": "/#projects",
+      "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Contact Chandrababu",
+      "short_name": "Contact",
+      "description": "Jump to contact details",
+      "url": "/#contact",
+      "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
     }
   ]
 }
