@@ -1,0 +1,32 @@
+{
+  "updated": "2026-09-17",
+  "roles": [
+    {
+      "title": "Java Developer — Java Kafka Developer",
+      "company": "Cognizant",
+      "location": "Bengaluru · Hybrid",
+      "posted": "15 Sep 2026",
+      "experience": "6–13 years",
+      "skills": ["Java", "Spring Boot", "Kafka", "Microservices", "REST APIs"],
+      "url": "https://careers.cognizant.com/emea-en/jobs/00070562472/java-developer-bangalore/"
+    },
+    {
+      "title": "Senior Java AWS Backend Developer",
+      "company": "PradeepIT Consulting Services",
+      "location": "Bengaluru · Full-time",
+      "posted": "16 Sep 2026",
+      "experience": "6–9 years",
+      "skills": ["Java 17+", "Spring Boot", "AWS", "Kafka", "SQL"],
+      "url": "https://www.ziprecruiter.in/jobs/599138162-senior-java-aws-backend-developer-at-pradeepit-consulting-services-pvt-ltd"
+    },
+    {
+      "title": "Java Backend Developer (Kafka)",
+      "company": "MobileProgramming",
+      "location": "Bengaluru · Full-time",
+      "posted": "Recent",
+      "experience": "3–6 years",
+      "skills": ["Java", "Spring Boot", "Kafka", "Microservices", "AWS"],
+      "url": "https://in.indeed.com/viewjob?jk=a7eaf23650a0a439"
+    }
+  ]
+}
