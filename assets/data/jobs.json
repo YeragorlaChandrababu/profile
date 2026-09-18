@@ -1,6 +1,33 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "roles": [
+    {
+      "title": "SDE 2 – Java Backend Developer",
+      "company": "Recruitment Hub 365",
+      "location": "Bengaluru · Hybrid",
+      "posted": "18 Sep 2026",
+      "experience": "4–6 years",
+      "skills": ["Java", "Microservices", "REST APIs", "AWS", "SQL", "gRPC"],
+      "url": "https://in.indeed.com/q-java-springboot-developer-2-years-l-bengaluru%2C-karnataka-jobs.html"
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Caterpillar",
+      "location": "Bengaluru · Full-time",
+      "posted": "18 Sep 2026",
+      "experience": "Not specified",
+      "skills": ["Java", "Software Design", "Testing", "Agile", "Production Support"],
+      "url": "https://careers.caterpillar.com/en/jobs/r0000380616/senior-software-engineer/"
+    },
+    {
+      "title": "Backend Engineer (Java 17 + Kafka)",
+      "company": "TALPRO India",
+      "location": "Bengaluru · Contract",
+      "posted": "18 Sep 2026",
+      "experience": "Relevant backend experience required",
+      "skills": ["Java 17+", "Spring Boot", "Kafka", "Microservices", "Event-driven architecture", "Observability", "SQL"],
+      "url": "https://builtinbengaluru.in/job/backend-engineer-java-17-kafka/10815450"
+    },
     {
       "title": "Java Developer — Java Kafka Developer",
       "company": "Cognizant",
