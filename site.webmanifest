@@ -3,12 +3,16 @@
   "short_name": "YC Portfolio",
   "description": "Senior Java Backend Engineer specializing in Spring Boot, Kafka, microservices and AWS.",
   "lang": "en-IN",
+  "dir": "ltr",
   "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "orientation": "portrait-primary",
   "background_color": "#070b14",
   "theme_color": "#070b14",
+  "prefer_related_applications": false,
   "categories": ["business", "portfolio", "technology"],
   "icons": [
     {
