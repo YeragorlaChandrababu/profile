@@ -23,6 +23,8 @@
     a.primary { border-color:transparent; background:var(--cyan); color:#04121c; }
     a.primary:hover { background:#7dd3fc; }
     button.secondary { background:transparent; }
+    button.tertiary { background:rgba(139,92,246,.08); border-color:rgba(139,92,246,.35); }
+    button.tertiary[data-copied="true"] { border-color:rgba(56,189,248,.45); color:#9bdfff; }
     .hint { margin-top:22px; color:#5f6d82; font:11px/1.6 monospace; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:.01ms !important; } }
   </style>
@@ -36,6 +38,7 @@
     <div class="actions">
       <a class="primary" href="/">Back to portfolio</a>
       <button class="secondary" type="button" id="back-button">Go back</button>
+      <button class="tertiary" type="button" id="copy-link" aria-live="polite">Copy link</button>
       <a href="https://github.com/YeragorlaChandrababu" target="_blank" rel="noopener noreferrer">Explore GitHub</a>
       <a href="https://www.linkedin.com/in/yeragorla-chandrababu/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
@@ -52,6 +55,19 @@
       backButton.style.opacity = '.45';
       backButton.style.cursor = 'not-allowed';
     }
+
+    const copyButton = document.getElementById('copy-link');
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        copyButton.dataset.copied = 'true';
+        copyButton.textContent = 'Link copied';
+        window.setTimeout(() => { copyButton.dataset.copied = 'false'; copyButton.textContent = 'Copy link'; }, 1800);
+      } catch {
+        copyButton.textContent = 'Copy unavailable';
+        window.setTimeout(() => { copyButton.textContent = 'Copy link'; }, 1800);
+      }
+    });
   </script>
 </body>
 </html>
