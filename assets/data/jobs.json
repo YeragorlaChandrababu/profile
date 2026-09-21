@@ -1,23 +1,41 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-09-22",
   "roles": [
     {
-      "title": "SDE 2 – Java Backend Developer",
-      "company": "Recruitment Hub 365",
-      "location": "Bengaluru · Hybrid",
-      "posted": "18 Sep 2026",
-      "experience": "4–6 years",
-      "skills": ["Java", "Microservices", "REST APIs", "AWS", "SQL", "gRPC"],
-      "url": "https://in.indeed.com/q-java-springboot-developer-2-years-l-bengaluru%2C-karnataka-jobs.html"
+      "title": "Senior Backend Engineer, Cloud Platform",
+      "company": "Postman",
+      "location": "Bengaluru · Full-time",
+      "posted": "20 Sep 2026",
+      "experience": "Not specified",
+      "skills": ["Java", "Backend Engineering", "Cloud Platform", "Distributed Systems", "Production Reliability"],
+      "url": "https://in.linkedin.com/jobs/senior-backend-developer-java-spring-boot-jobs-bengaluru"
     },
     {
-      "title": "Senior Software Engineer",
-      "company": "Caterpillar",
+      "title": "Java Backend Developer",
+      "company": "Zensar Technologies",
       "location": "Bengaluru · Full-time",
-      "posted": "18 Sep 2026",
+      "posted": "21 Sep 2026",
       "experience": "Not specified",
-      "skills": ["Java", "Software Design", "Testing", "Agile", "Production Support"],
-      "url": "https://careers.caterpillar.com/en/jobs/r0000380616/senior-software-engineer/"
+      "skills": ["Java", "Spring Boot", "Backend Development", "REST APIs", "Microservices"],
+      "url": "https://in.linkedin.com/jobs/springboot-developer-jobs-bengaluru"
+    },
+    {
+      "title": "Senior Java Developer (5+ YOE)",
+      "company": "HuntingCube",
+      "location": "Bengaluru East · Full-time",
+      "posted": "20 Sep 2026",
+      "experience": "5+ years",
+      "skills": ["Java", "Spring Boot", "Backend Development", "Microservices", "REST APIs"],
+      "url": "https://in.linkedin.com/jobs/springboot-developer-jobs-bengaluru"
+    },
+    {
+      "title": "Senior Software Engineer — Java, Spring Boot, AWS, Microservices",
+      "company": "Saarthee",
+      "location": "Bengaluru · Full-time",
+      "posted": "21 Sep 2026",
+      "experience": "4+ years",
+      "skills": ["Java", "Spring Boot", "AWS", "Microservices", "REST APIs"],
+      "url": "https://in.indeed.com/q-java-springboot-developer-for-4-years-l-bengaluru%2C-karnataka-jobs.html"
     },
     {
       "title": "Backend Engineer (Java 17 + Kafka)",
@@ -29,31 +47,13 @@
       "url": "https://builtinbengaluru.in/job/backend-engineer-java-17-kafka/10815450"
     },
     {
-      "title": "Java Developer — Java Kafka Developer",
-      "company": "Cognizant",
+      "title": "SDE 2 – Java Backend Developer",
+      "company": "Recruitment Hub 365",
       "location": "Bengaluru · Hybrid",
-      "posted": "15 Sep 2026",
-      "experience": "6–13 years",
-      "skills": ["Java", "Spring Boot", "Kafka", "Microservices", "REST APIs"],
-      "url": "https://careers.cognizant.com/emea-en/jobs/00070562472/java-developer-bangalore/"
-    },
-    {
-      "title": "Senior Java AWS Backend Developer",
-      "company": "PradeepIT Consulting Services",
-      "location": "Bengaluru · Full-time",
-      "posted": "16 Sep 2026",
-      "experience": "6–9 years",
-      "skills": ["Java 17+", "Spring Boot", "AWS", "Kafka", "SQL"],
-      "url": "https://www.ziprecruiter.in/jobs/599138162-senior-java-aws-backend-developer-at-pradeepit-consulting-services-pvt-ltd"
-    },
-    {
-      "title": "Java Backend Developer (Kafka)",
-      "company": "MobileProgramming",
-      "location": "Bengaluru · Full-time",
-      "posted": "Recent",
-      "experience": "3–6 years",
-      "skills": ["Java", "Spring Boot", "Kafka", "Microservices", "AWS"],
-      "url": "https://in.indeed.com/viewjob?jk=a7eaf23650a0a439"
+      "posted": "18 Sep 2026",
+      "experience": "4–6 years",
+      "skills": ["Java", "Microservices", "REST APIs", "AWS", "SQL", "gRPC"],
+      "url": "https://in.indeed.com/q-java-springboot-developer-2-years-l-bengaluru%2C-karnataka-jobs.html"
     }
   ]
 }
