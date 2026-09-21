@@ -10,7 +10,7 @@
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],
   "launch_handler": { "client_mode": "navigate-existing" },
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#070b14",
   "theme_color": "#070b14",
   "prefer_related_applications": false,
