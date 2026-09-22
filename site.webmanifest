@@ -37,6 +37,13 @@
       "description": "Jump to contact details",
       "url": "/#contact",
       "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Latest opportunities",
+      "short_name": "Opportunities",
+      "description": "Browse current backend roles aligned with the portfolio",
+      "url": "/#opportunities",
+      "icons": [{ "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
     }
   ]
 }
