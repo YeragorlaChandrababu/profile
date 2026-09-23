@@ -1,6 +1,15 @@
 {
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "roles": [
+    {
+      "title": "Senior Java Backend Engineer",
+      "company": "DXC Luxoft",
+      "location": "Bengaluru · Full-time",
+      "posted": "23 Sep 2026",
+      "experience": "Not specified",
+      "skills": ["Java", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Docker", "Kubernetes", "AWS", "MongoDB", "MySQL", "Integration Testing"],
+      "url": "https://career.luxoft.com/jobs/senior-java-backend-engineer-27720"
+    },
     {
       "title": "Java Backend Developer",
       "company": "Zensar Technologies",
@@ -9,15 +18,6 @@
       "experience": "4–6 years",
       "skills": ["Java 8/11/17", "Spring Boot", "Spring WebFlux", "Microservices", "REST APIs", "Docker", "Kubernetes", "SQL/NoSQL", "Kafka"],
       "url": "https://www.ziprecruiter.in/jobs/604215739-java-backend-developer-at-zensar-technologies"
-    },
-    {
-      "title": "Senior Java Backend Developer",
-      "company": "ACL Digital",
-      "location": "Bengaluru · Hybrid",
-      "posted": "22 Sep 2026",
-      "experience": "6+ years",
-      "skills": ["Core Java", "Microservices", "Kafka", "AWS", "MongoDB", "SQL/NoSQL", "Unit Testing", "Integration Testing"],
-      "url": "https://www.ziprecruiter.in/jobs/604177013-java-backend-developer-at-acl-digital"
     },
     {
       "title": "Java Backend Developer",
@@ -29,31 +29,13 @@
       "url": "https://www.ziprecruiter.in/jobs/604182809-java-backend-developer-at-tata-consultancy-services"
     },
     {
-      "title": "Kafka Admin/Developer",
-      "company": "Successive Technologies",
-      "location": "Bengaluru · Full-time",
-      "posted": "15 Sep 2026",
-      "experience": "5–7 years",
-      "skills": ["Confluent Kafka", "Java", "Spring Boot", "Kafka Streams", "REST APIs", "Microservices", "Schema Registry", "Observability"],
-      "url": "https://www.hyptechie.com/job/kafka-admin-developer-5-7-years-bengaluru/"
-    },
-    {
-      "title": "Senior Software Engineer — Java, Spring Boot, AWS, Microservices",
-      "company": "Saarthee",
-      "location": "Bengaluru · Full-time",
-      "posted": "21 Sep 2026",
-      "experience": "4+ years",
-      "skills": ["Java", "Spring Boot", "AWS", "Microservices", "REST APIs"],
-      "url": "https://in.indeed.com/q-java-springboot-developer-for-4-years-l-bengaluru%2C-karnataka-jobs.html"
-    },
-    {
-      "title": "SDE 2 – Java Backend Developer",
-      "company": "Recruitment Hub 365",
+      "title": "Senior Java Backend Developer",
+      "company": "ACL Digital",
       "location": "Bengaluru · Hybrid",
-      "posted": "18 Sep 2026",
-      "experience": "4–6 years",
-      "skills": ["Java", "Microservices", "REST APIs", "AWS", "SQL", "gRPC"],
-      "url": "https://in.indeed.com/q-java-springboot-developer-2-years-l-bengaluru%2C-karnataka-jobs.html"
+      "posted": "22 Sep 2026",
+      "experience": "6+ years",
+      "skills": ["Core Java", "Microservices", "Kafka", "AWS", "MongoDB", "SQL/NoSQL", "Unit Testing", "Integration Testing"],
+      "url": "https://www.ziprecruiter.in/jobs/604177013-java-backend-developer-at-acl-digital"
     }
   ]
 }
