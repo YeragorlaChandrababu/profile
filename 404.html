@@ -25,6 +25,7 @@
     button.secondary { background:transparent; }
     button.tertiary { background:rgba(139,92,246,.08); border-color:rgba(139,92,246,.35); }
     button.tertiary[data-copied="true"] { border-color:rgba(56,189,248,.45); color:#9bdfff; }
+    a.report { background:rgba(56,189,248,.06); border-color:rgba(56,189,248,.28); color:#b9eaff; }
     .hint { margin-top:22px; color:#5f6d82; font:11px/1.6 monospace; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration:.01ms !important; } }
   </style>
@@ -39,6 +40,7 @@
       <a class="primary" href="/">Back to portfolio</a>
       <button class="secondary" type="button" id="back-button">Go back</button>
       <button class="tertiary" type="button" id="copy-link" aria-live="polite">Copy link</button>
+      <a class="report" id="report-link" href="https://github.com/YeragorlaChandrababu/profile/issues/new" target="_blank" rel="noopener noreferrer">Report broken link</a>
       <a href="https://github.com/YeragorlaChandrababu" target="_blank" rel="noopener noreferrer">Explore GitHub</a>
       <a href="https://www.linkedin.com/in/yeragorla-chandrababu/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
     </div>
@@ -68,6 +70,11 @@
         window.setTimeout(() => { copyButton.textContent = 'Copy link'; }, 1800);
       }
     });
+
+    const reportLink = document.getElementById('report-link');
+    const issueTitle = encodeURIComponent(`Broken link: ${window.location.pathname}`);
+    const issueBody = encodeURIComponent(`I found a broken or missing route on the portfolio.\n\nURL: ${window.location.href}\n\nWhat I expected to find:\n`);
+    reportLink.href = `https://github.com/YeragorlaChandrababu/profile/issues/new?title=${issueTitle}&body=${issueBody}`;
   </script>
 </body>
 </html>
