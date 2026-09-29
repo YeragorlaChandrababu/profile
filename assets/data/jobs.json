@@ -1,6 +1,33 @@
 {
-  "updated": "2026-09-24",
+  "updated": "2026-09-29",
   "roles": [
+    {
+      "title": "Java Backend Developer",
+      "company": "Capco",
+      "location": "Bengaluru · On-site",
+      "posted": "28 Sep 2026",
+      "experience": "8–12 years",
+      "skills": ["Java", "Spring Boot", "Microservices", "Kafka", "AWS/GCP/Azure", "Kubernetes", "REST APIs", "TDD/BDD"],
+      "url": "https://jobs-radar.com/en/job/java-backend-developer-at-capco-f287a9"
+    },
+    {
+      "title": "Staff SW Engineer — Java Backend with GenAI",
+      "company": "Pismo / Visa",
+      "location": "Bengaluru · Hybrid",
+      "posted": "28 Sep 2026",
+      "experience": "7.5+ years",
+      "skills": ["Java", "Spring", "Distributed Systems", "Microservices", "Event-driven Architecture", "Kafka", "REST APIs", "MySQL", "OpenTelemetry"],
+      "url": "https://jobs.accel.com/companies/pismo/jobs/94997420-staff-sw-engineer-java-backend-with-genai-experience"
+    },
+    {
+      "title": "Sr. Backend Developer (Java)",
+      "company": "Altimetrik",
+      "location": "Bengaluru · On-site",
+      "posted": "25 Sep 2026",
+      "experience": "6+ years",
+      "skills": ["Java", "Spring Boot", "Hibernate", "Spring Data JPA", "MySQL", "PostgreSQL", "REST APIs", "JUnit", "Mockito", "Docker", "Jenkins"],
+      "url": "https://alion.io/company/altimetrik/jobs"
+    },
     {
       "title": "Senior Java Backend Engineer",
       "company": "DXC Luxoft",
@@ -9,33 +36,6 @@
       "experience": "Not specified",
       "skills": ["Java", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Docker", "Kubernetes", "AWS", "MongoDB", "MySQL", "Integration Testing"],
       "url": "https://career.luxoft.com/jobs/senior-java-backend-engineer-27720"
-    },
-    {
-      "title": "Java Backend Developer",
-      "company": "Zensar Technologies",
-      "location": "Bengaluru · Full-time",
-      "posted": "22 Sep 2026",
-      "experience": "4–6 years",
-      "skills": ["Java 8/11/17", "Spring Boot", "Spring WebFlux", "Microservices", "REST APIs", "Docker", "Kubernetes", "SQL/NoSQL", "Kafka"],
-      "url": "https://www.ziprecruiter.in/jobs/604215739-java-backend-developer-at-zensar-technologies"
-    },
-    {
-      "title": "Java Backend Developer",
-      "company": "Tata Consultancy Services",
-      "location": "Bengaluru / Chennai / Hyderabad · Full-time",
-      "posted": "22 Sep 2026",
-      "experience": "5–12 years",
-      "skills": ["Java 17", "Spring Boot", "Microservices", "Kafka", "Redis", "MongoDB", "JUnit", "Mockito", "Kubernetes"],
-      "url": "https://www.ziprecruiter.in/jobs/604182809-java-backend-developer-at-tata-consultancy-services"
-    },
-    {
-      "title": "Senior Java Backend Developer",
-      "company": "ACL Digital",
-      "location": "Bengaluru · Hybrid",
-      "posted": "22 Sep 2026",
-      "experience": "6+ years",
-      "skills": ["Core Java", "Microservices", "Kafka", "AWS", "MongoDB", "SQL/NoSQL", "Unit Testing", "Integration Testing"],
-      "url": "https://www.ziprecruiter.in/jobs/604177013-java-backend-developer-at-acl-digital"
     }
   ]
 }
